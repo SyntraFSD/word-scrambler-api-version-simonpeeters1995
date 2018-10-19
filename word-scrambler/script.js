@@ -1,13 +1,16 @@
-console.log('ready to go!!');
+
 
 //select textarea
-let textarea = document.querySelector('textarea');
+let textarea = document.querySelectorAll('.textarea')[0];
 //select btn
 let btn = document.querySelector('#submit');
 
-btn.addEventListener('click',function(){
 
-});
+function clicker(){
+    let blablabla = textarea.value;
+
+}
 
 
-console.log(textarea.textContent);
+
+btn.addEventListener('click',clicker);
