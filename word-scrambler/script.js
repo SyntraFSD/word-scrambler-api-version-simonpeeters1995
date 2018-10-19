@@ -1,6 +1,8 @@
 console.log('ready to go!!');
 
 //select text area
-let TextArea = document.getElementsByClassName("textarea");
+let TextArea = document.querySelector("textarea");
 //select btn
-let btn = document.getElementById("submit");
+let btn = document.querySelector("#submit");
+
+btn.onclick = function();
