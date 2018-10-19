@@ -9,7 +9,7 @@ console.log(tekst.textContent);
 //
 button.addEventListener("click",function(){
 
-let wordArray = tekst.innerHTML.split(' ');
+let wordArray = tekst.value.split(' ');
 let textChanged="";
 
 wordArray.sort(function(a,b) {return 0.5-Math.random()});
