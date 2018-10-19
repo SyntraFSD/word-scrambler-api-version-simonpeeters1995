@@ -1,6 +1,8 @@
 console.log('ready to go!!');
 
 //select textearea
-document.querySelector('textarea');
+let textarea = document.querySelector('textarea');
 //select btn
-document.querySelector('#submit');
+let btn = document.querySelector('#submit');
+
+
