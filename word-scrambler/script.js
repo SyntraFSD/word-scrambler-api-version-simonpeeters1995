@@ -8,7 +8,7 @@ let button = document.querySelector("#submit");
 console.log(tekst.textContent);
 //
 button.addEventListener("click",function(){
-let array = tekst.textContent.split(" ");
+let array = tekst.textContent.split("");
 console.log(array); 
 
 
