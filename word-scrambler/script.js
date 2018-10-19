@@ -8,10 +8,10 @@ let button = document.querySelector("#submit");
 console.log(tekst.textContent);
 //
 button.addEventListener("click",function(){
-let array = tekst.textContent.split(" ");
+let array = tekst.textContent.split(' ');
+for(let i =0;i<array.length;i++){
 
-console.log(array.length); 
-
+}
 
 let uitkomst = document.querySelector(".card-content");
 });
