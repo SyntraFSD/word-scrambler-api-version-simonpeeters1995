@@ -11,9 +11,21 @@ Gebruik de terminal uit VSCode om de volgende commands uit te voeren.
 1. `git clone https://github.com/SyntraFSD-JS/les-01.git les-01`
 2. `cd les-01`
 3. `git checkout -b [naam]`
-4. `git checkout [naam]`
-5. `git push origin [naam]`
+4. `git push origin [naam]`
 
+Push regelmatig de changes die je maakt naar github
+
+1. Commit je changes:
+   1. Druk `Ctrl-Shift-G` om de Dource Control tab te openen
+   2. Geef een beschrijving van de changes die je deed en duw `Ctrl-Enter`
+2. Push je changes:
+   1. Druk `Ctrl-Shift-P` om het Command Palette te openen
+   2. Zoek naar `Git: Push` en druk op `Enter` om uit te voeren 
+   
+Pull regelmatig om opmerkingen of aanpassingen van mij binnen te halen
+1. Druk `Ctrl-Shift-P` om het Command Palette te openen
+2. Zoek naar `Git: Pull` en druk op `Enter` om uit te voeren 
+     
 
 ## Oefeningen Les 01
 ### Oefening 01: Word Scrambler
