@@ -34,12 +34,12 @@ Let wel op voor merge conflicten, hierover meer als het zo ver is.
      
 ## Structuur
 De oefeningen bevinden zich in een aparte map met de naam `ex[oef. nummer]_[oef. naam]`
-Daarin zitten alle bestanden die je nodig hebt om de oefening te maken, meestal is dit een `index.html` en een `script_.js` bestand.
+Daarin zitten alle bestanden die je nodig hebt om de oefening te maken, meestal is dit een `index.html` en een `script.js` bestand.
 Het script bestand zal al gelinkt zijn aan het html bestand. Zie:
 ```html
-<script src="script_.js"></script>
+<script src="script.js"></script>
 ```
-Normaal moet je niet in het html bestand meer werken maar enkel in `script_.js`.
+Normaal moet je niet in het html bestand meer werken maar enkel in `script.js`.
 Ook daar zal meestal al een basisstructuur aanwezig zijn waarbij in comments staat waar je zelf dingen moet aanvullen.
 
 Om het resultaat van je oefening te bekijken open je het `index.html` bestand in chrome.
@@ -65,7 +65,7 @@ Er is een knop `<button id="submit-btn" class="button is-info">` voorzien,
 als de gebruiker daarop een `click event triggered` verschijnt de door elkaar gehaalde tekst onder de knop
 (`<div id="result-container" class="card-content">`). 
 
-Voor verdere instructies kijk je in het script_.js bestand.
+Voor verdere instructies kijk je in het script.js bestand.
 
 #### Wat heb ik nodig:
 (Als ik `[test]` vierkante haakjes gebruik is wat er tussen de haakjes staat een beschrijving van het soort waarde er verwacht is. Neem dit nooit letterlijk over.)
