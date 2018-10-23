@@ -2,7 +2,7 @@
 ## Voorbereiding:
 Clone de git-repository uit github en maak je eigen branch.
 1. Kopieer de url via github naar je klembord:  
-   ![Copy url](https://raw.githubusercontent.com/SyntraFSD-JS/ex-01/korneel/images/copy_github.png "Copy url to clipboard")
+   ![Copy url](https://raw.githubusercontent.com/SyntraFSD-JS/ex-01/master/images/copy_github.png "Copy url to clipboard")
 
 Gebruik de terminal uit VSCode om de volgende commands uit te voeren.
 (vervang `[naam]` door je eigen naam)
