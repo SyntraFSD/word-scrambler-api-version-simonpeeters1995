@@ -20,17 +20,17 @@
 
 <section class="section">
     <div class="container">
-        <textarea class="textarea" rows="10">
-            Semper feugiat nibh sed pulvinar proin gravida hendrerit lectus a. Non sodales neque sodales ut.
-        </textarea>
+        <textarea id="user-input" class="textarea" rows="10">Semper feugiat nibh sed pulvinar proin gravida hendrerit lectus a. Non sodales neque sodales ut.</textarea>
     </div>
     <div class="container" style="margin-top: 1rem; margin-bottom: 1rem;">
-        <button id="submit" class="button is-info">Scramble</button>
+        <button id="submit-btn" class="button is-info">Scramble</button>
+        <p class="is-pulled-right">Letters: <span id="letter-count">0</span></p>
+        <p class="is-pulled-right" style="margin-right:1rem;">Words: <span id="word-count">0</span></p>
     </div>
     <div class="container">
         <div class="card">
-            <div class="card-content">
-                Semper feugiat nibh sed pulvinar proin gravida hendrerit lectus a. Non sodales neque sodales ut.
+            <div id="result-container" class="card-content">
+                gravida hendrerit pulvinar Non neque nibh sodales a. ut. proin feugiat sed Semper sodales lectus
             </div>
         </div>
     </div>

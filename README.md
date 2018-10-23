@@ -51,17 +51,17 @@ Debuggen gebeurt in de browser zelf door middel van de console of met break poin
 ### Oefening 01: Word Scrambler
 #### Doel:
 
-De html pagina bevat een textvak `<textarea class="textarea" rows="10">`, 
+De html pagina bevat een textvak `<textarea id="user-input" class="textarea" rows="10">`, 
 daarin kan onze gebruiker eender welke tekst achterlaten.
 Maar onze klant is ongerust over zijn privacy daarom moeten wij zijn text encoden. 
 We doen dit door de volgorde van zijn woorden door elkaar te halen.
-Er is een knop `<button id="submit" class="button is-info">Scramble</button>` voorzien,
+Er is een knop `<button id="submit-btn" class="button is-info">` voorzien,
 als de gebruiker daarop een `click event triggered` verschijnt de door elkaar gehaalde tekst onder de knop
-(`<div class="card-content">`). 
+(`<div id="result-container" class="card-content">`). 
 
 Voor verdere instructies kijk je in het script.js bestand.
 
-#### Wat zal ik leren:
+#### Wat heb ik nodig:
 (Als ik `[test]` vierkante haakjes gebruik is wat er tussen de haakjes staat een beschrijving van het soort waarde er verwacht is. Neem dit nooit letterlijk over.)
 
 - DOM Methods:
@@ -76,4 +76,21 @@ Voor verdere instructies kijk je in het script.js bestand.
       - `[inputElement].value`:   
       Geeft de waarde terug die in een `input` of `textarea` ingevuld zijn. 
       Je kan de waarde wijzigen door `[inputElement].value = "Tekst die ik liever zie"`
+      - `[element].textContent`:  
+      Geeft de textuele waarde terug uit een element.  
+      `<p>Een mooie zin.<p>` => de `p.textContent` zou hier `"Een mooie zin."` zijn.  
+      Je kan de content ook wijzigen door `[element].textContent = "Een andere zin."`
+- Array:
+   - `[array].join()`
+   - `[array].push()`
+   - `[array].splice()`
+- Math:
+   - `Math.floor()`
+   - `Math.random()`
+- String:
+   - `[string].trim()`
+   - `[string].split()`
+- this keyword!:  
+   [mozilla.org](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)
+   
       

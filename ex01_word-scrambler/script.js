@@ -1,16 +1,74 @@
-
+"use strict";
 
 //select textarea
-let textarea = document.querySelectorAll('.textarea')[0];
+let userInput;
 //select btn
-let btn = document.querySelector('#submit');
+let submitBtn;
+//select result container
+let resultContainer;
+//# select wordCount
+let wordCountContainer;
+//# select letterCount
+let letterCountContainer;
 
 
-function clicker(){
-    let blablabla = textarea.value;
-
+function getUserInput() {
+    //return value of userInput
 }
 
+function textToWordArray(text) {
+    //return array of words
+}
 
+function arrayToText(array) {
+}
 
-btn.addEventListener('click',clicker);
+function getRandomNumber(max) {
+    //return random number between 0 and max (including 0 and excluding max)
+}
+
+function scrambleArray(oldArray) {
+    //return scrambled array
+}
+
+function scrambleText(text) {
+    // return scrambled text
+}
+
+function onClickScramble() {
+    // update textContent of resultContainer
+}
+
+function realTimeScramble(event) {
+    //## update textContent of resultContainer realtime
+}
+
+function getWordCount(text) {
+    //# return word count
+}
+
+function getLetterCount(text) {
+    //# return letter count
+}
+
+function updateWordCount(wordCount) {
+    //# update the Word Count
+}
+
+function updateLetterCount(letterCount){
+    //# update the Letter Count
+}
+
+function updateCounts(event) {
+    //# update Word Count and Letter Count
+    let currentText = this.value;
+    // this when function is executed by event => event.target
+    // this.value == event.target.value
+}
+
+//add click event listener to submitBtn
+submitBtn.addEventListener("click", onClickScramble);
+//# add input event listener to userInput for counts
+userInput.addEventListener("input", updateCounts);
+//## add input event listener to userinput for realTimeScramble
+userInput.addEventListener("input", realTimeScramble);
