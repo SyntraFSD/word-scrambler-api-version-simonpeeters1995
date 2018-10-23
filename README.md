@@ -44,14 +44,20 @@ In deze module gebruiken we allemaal chrome zodat we allemaal hetzelfde resultaa
 Debuggen gebeurt in de browser zelf door middel van de console of met break points.
 
 1. Om te debuggen met de console gebruik je volgende function `console.log([wat je wil loggen])`
-   In de tab console van de developer tools (`F12` of `inspect element`) zie wordt geprint wat je logt.
+   In de tab console van de developer tools (`Ctrl-Shift-J`) zie wordt geprint wat je logt.
+2. Om efficiënter te debuggen gebruiken we break points:
+   [![Debugging in chrome](https://img.youtube.com/vi/H0XScE08hy8/0.jpg)](https://developers.google.com/web/tools/chrome-devtools/javascript/)
 
-
-## Oefeningen Les 01
+## Oefeningen:
 ### Oefening 01: Word Scrambler
+#### Doel:
 
-Haal de text uit het textveld dooreen wanneer er op de knop wordt gedrukt.
+De html pagina bevat een textvak `<textarea class="textarea" rows="10">`, 
+daarin kan onze gebruiker eender welke tekst achterlaten.
+Maar onze klant is ongerust over zijn privacy daarom moeten wij zijn text encoden. 
+We doen dit door de volgorde van zijn woorden door elkaar te halen.
+Er is een knop `<button id="submit" class="button is-info">Scramble</button>` voorzien,
+als de gebruiker daarop een `click event triggered` verschijnt de door elkaar gehaalde tekst onder de knop
+(`<div class="card-content">`). 
 
-#### Uitbreidingen
-- Word-count
-- Real-time scrambler
+Voor verdere instructies kijk je in het script.js bestand.
