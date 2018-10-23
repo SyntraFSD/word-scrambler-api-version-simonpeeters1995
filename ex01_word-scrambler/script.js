@@ -1,5 +1,3 @@
-"use strict";
-
 //select textarea
 let userInput;
 //select btn
