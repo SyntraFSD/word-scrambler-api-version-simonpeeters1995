@@ -1,5 +1,9 @@
 {
-  "name" : "Syntra FSDJS - Oefening 1",
-  "description" : "Word scramble javascript oefening",
-  "keywords": ["javascript", "syntra"]
+  "name": "Syntra FSDJS - Oefening 1",
+  "description": "Word scramble javascript oefening",
+  "keywords": [
+    "javascript",
+    "syntra"
+  ],
+  "main": "index.html"
 }
