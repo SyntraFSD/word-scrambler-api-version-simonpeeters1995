@@ -26,8 +26,10 @@ Pull regelmatig om opmerkingen of aanpassingen van mij binnen te halen
 2. Zoek naar `Git: Pull` en druk op `Enter` om uit te voeren 
      
 Om je code te `mergen` met de master branch (mijn code) doe je:
+
 1. `git merge master`
-2. `git push origin`  
+2. `git push origin`
+
 Let wel op voor merge conflicten, hierover meer als het zo ver is.
      
 ## Structuur
