@@ -1,13 +1,14 @@
 console.log('ready to go!!');
-let number1 = document.querySelector('#number-01');
-let number2 = document.querySelector('#number-02');
+
 let button = document.querySelector('.is-info');
 
 function clicker(){
-    let sum = parseInt(number1.value) + parseInt(number2.value);
-    let minus = parseInt(number1.value) - parseInt(number2.value);
-    let multiply = parseInt(number1.value) * parseInt(number2.value);
-    let divide = parseInt(number1.value) / parseInt(number2.value);
+    let number1 = parseInt(document.querySelector('#number-01').value);
+    let number2 = parseInt(document.querySelector('#number-02').value);
+    let sum = number1 + number2;
+    let minus = number1 - number2;
+    let multiply = number1 * number2;
+    let divide = number1 / number2;
     let result = parseFloat(divide);
     document.getElementById('result').innerHTML = sum;
     document.getElementById('result2').innerHTML = minus;
