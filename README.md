@@ -1,14 +1,14 @@
-# les-01
+# Oefening 01
 ## Voorbereiding:
 Clone de git-repository uit github en maak je eigen branch.
 1. Kopieer de url via github naar je klembord:  
-   ![Copy url](https://raw.githubusercontent.com/SyntraFSD-JS/les-01/korneel/images/copy_github.png "Copy url to clipboard")
+   ![Copy url](https://raw.githubusercontent.com/SyntraFSD-JS/ex-01/korneel/images/copy_github.png "Copy url to clipboard")
 
 Gebruik de terminal uit VSCode om de volgende commands uit te voeren.
 (vervang `[naam]` door je eigen naam)
 
-1. `git clone https://github.com/SyntraFSD-JS/les-01.git les-01`
-2. `cd les-01`
+1. `git clone https://github.com/SyntraFSD-JS/ex-01.git ex-01`
+2. `cd ex-01`
 3. `git checkout -b [naam]`
 4. `git push origin [naam]`
 
