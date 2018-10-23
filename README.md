@@ -2,8 +2,7 @@
 ## Voorbereiding:
 Clone de git-repository uit github en maak je eigen branch.
 1. Kopieer de url via github naar je klembord:
-
-   ![Copy url](https://raw.githubusercontent.com/SyntraFSD-JS/les-01/korneel/images/copy_github.png "Copy url to clipboard")
+  ![Copy url](https://raw.githubusercontent.com/SyntraFSD-JS/les-01/korneel/images/copy_github.png "Copy url to clipboard")
 
 Gebruik de terminal uit VSCode om de volgende commands uit te voeren.
 (vervang `[naam]` door je eigen naam)
@@ -44,9 +43,9 @@ In deze module gebruiken we allemaal chrome zodat we allemaal hetzelfde resultaa
 Debuggen gebeurt in de browser zelf door middel van de console of met break points.
 
 1. Om te debuggen met de console gebruik je volgende function `console.log([wat je wil loggen])`
-   In de tab console van de developer tools (`Ctrl-Shift-J`) zie wordt geprint wat je logt.
+  In de tab console van de developer tools (`Ctrl-Shift-J`) zie wordt geprint wat je logt.
 2. Om efficiënter te debuggen gebruiken we break points:
-   [![Debugging in chrome](https://img.youtube.com/vi/H0XScE08hy8/0.jpg)](https://developers.google.com/web/tools/chrome-devtools/javascript/)
+  [![Debugging in chrome](https://img.youtube.com/vi/H0XScE08hy8/0.jpg)](https://developers.google.com/web/tools/chrome-devtools/javascript/)
 
 ## Oefeningen:
 ### Oefening 01: Word Scrambler
@@ -61,3 +60,12 @@ als de gebruiker daarop een `click event triggered` verschijnt de door elkaar ge
 (`<div class="card-content">`). 
 
 Voor verdere instructies kijk je in het script.js bestand.
+
+#### Wat zal ik leren:
+
+- DOM Methods:
+   - Wat is het Document Object Model:
+   [mozilla.org](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction#What_is_the_DOM)
+   - Enkele methods:
+      - `querySelector()` en `querySelectorAll()`:
+      
