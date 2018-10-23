@@ -12,10 +12,10 @@ function calculate () {
     let iverschil = parseInt(snumber_01.value) / parseInt(inumber_02.value);
     let fomzetting = parseFloat(verschil);
     let iresultaat = Math.round(verschil*10)/10;
-    document.getElementById('result1').innerHTML = isom;
-    document.getElementById('result2').innerHTML = iverschil;
-    document.getElementById('result3').innerHTML = iproduct;
-    document.getElementById('result4').innerHTML = iresultaat;
+    document.getElementById("#result1").innerHTML = isom;
+    document.getElementById("#result2").innerHTML = iverschil;
+    document.getElementById("#result3").innerHTML = iproduct;
+    document.getElementById("#result4").innerHTML = iresultaat;
 }
 
 
