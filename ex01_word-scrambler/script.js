@@ -1,9 +1,9 @@
 //select textarea
-let userInput;
+let userInput= document.querySelector(".textarea");
 //select btn
-let submitBtn;
+let submitBtn= document.querySelector("#submit-btn");
 //select result container
-let resultContainer;
+let resultContainer= document.querySelector(".card-content");
 //# select wordCount
 let wordCountContainer;
 //# select letterCount
@@ -12,29 +12,43 @@ let letterCountContainer;
 
 function getUserInput() {
     //return value of userInput
+    return userInput.value;
 }
 
 function textToWordArray(text) {
     //return array of words
+    return text.trim().split(" ");
+
 }
 
 function arrayToText(array) {
+    return array.tostring();   
 }
 
 function getRandomNumber(max) {
     //return random number between 0 and max (including 0 and excluding max)
+    return Math.floor(Math.random() * max + 1);
 }
 
 function scrambleArray(oldArray) {
     //return scrambled array
+    return oldArray.sort(function(a,b) {return 0.5-Math.random()});
 }
 
 function scrambleText(text) {
     // return scrambled text
+    let wordArray = textToWordArray(text);
+    wordArray = scrambleArray(wordArray);
+    let textChanged = arrayToText(wordArray);
+
+    return textChanged;
 }
 
 function onClickScramble() {
     // update textContent of resultContainer
+    let text= getUserInput();
+    let nieuweText = scrambleText(text);
+    resultContainer.textContent = nieuweText; 
 }
 
 function realTimeScramble(event) {
@@ -43,10 +57,12 @@ function realTimeScramble(event) {
 
 function getWordCount(text) {
     //# return word count
+    return text.wordCount;
 }
 
 function getLetterCount(text) {
     //# return letter count
+    return text.letterCount;
 }
 
 function updateWordCount(wordCount) {
