@@ -53,6 +53,9 @@ function onClickScramble() {
 
 function realTimeScramble(event) {
     //## update textContent of resultContainer realtime
+    let text= getUserInput();
+    let nieuweText = scrambleText(text);
+    resultContainer.textContent = nieuweText;
 }
 
 function getWordCount(text) {
