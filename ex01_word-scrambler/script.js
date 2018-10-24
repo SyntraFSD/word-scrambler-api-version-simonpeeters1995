@@ -5,9 +5,9 @@ let submitBtn= document.querySelector("#submit-btn");
 //select result container
 let resultContainer= document.querySelector(".card-content");
 //# select wordCount
-let wordCountContainer;
+let wordCountContainer= document.querySelector("#word-count");
 //# select letterCount
-let letterCountContainer;
+let letterCountContainer= document.querySelector("#letter-count");
 
 
 function getUserInput() {
@@ -27,12 +27,22 @@ function arrayToText(array) {
 
 function getRandomNumber(max) {
     //return random number between 0 and max (including 0 and excluding max)
-    return Math.floor(Math.random() * max + 1);
+    return Math.floor(Math.random() * max);
 }
 
 function scrambleArray(oldArray) {
     //return scrambled array
-    return oldArray.sort(function(a,b) {return 0.5-Math.random()});
+    //alternative oplossing --->                    
+    //return oldArray.sort(function(a,b) {return 0.5-Math.random()});
+    let newAray=[];
+    
+    while(oldArray.length > 0){
+        let randomIndex = getRandomNumber(oldArray.length);
+        newAray.push(oldArray[randomIndex]);
+        oldArray.splice(randomIndex,1);
+    }
+
+    return newAray;
 }
 
 function scrambleText(text) {
@@ -40,6 +50,7 @@ function scrambleText(text) {
     let wordArray = textToWordArray(text);
     wordArray = scrambleArray(wordArray);
     let textChanged = arrayToText(wordArray);
+
 
     return textChanged;
 }
@@ -60,20 +71,22 @@ function realTimeScramble(event) {
 
 function getWordCount(text) {
     //# return word count
-    return text.wordCount;
+    return text.split(" ").length;
 }
 
 function getLetterCount(text) {
     //# return letter count
-    return text.letterCount;
+    return text.trim().length;
 }
 
 function updateWordCount(wordCount) {
     //# update the Word Count
+    wordCountContainer.textContent=wordCount
 }
 
 function updateLetterCount(letterCount){
     //# update the Letter Count
+    letterCountContainer.textContent=letterCount
 }
 
 function updateCounts(event) {
@@ -81,6 +94,12 @@ function updateCounts(event) {
     let currentText = this.value;
     // this when function is executed by event => event.target
     // this.value == event.target.value
+    let letters = getLetterCount(currentText);
+    let woorden = getWordCount(currentText);
+    
+    updateWordCount(letters);
+    updateLetterCount(woorden);
+
 }
 
 //add click event listener to submitBtn
