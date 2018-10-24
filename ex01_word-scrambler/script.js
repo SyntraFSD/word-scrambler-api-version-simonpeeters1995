@@ -1,40 +1,64 @@
 //select textarea
-let userInput;
+let userInput = document.querySelector(".textarea");
 //select btn
-let submitBtn;
+let submitBtn = document.querySelector("#submit-btn");
 //select result container
-let resultContainer;
+let resultContainer = document.querySelector("#result-container");
 //# select wordCount
-let wordCountContainer;
+let wordCountContainer = document.querySelector("#word-count");
 //# select letterCount
-let letterCountContainer;
+let letterCountContainer = document.querySelector("#letter-count");
+
 
 
 function getUserInput() {
     //return value of userInput
+    return userInput.value;
 }
+//console.log(getUserInput());
 
 function textToWordArray(text) {
     //return array of words
+    return text.trim().split(" ");
 }
+//console.log(textToWordArray());
 
 function arrayToText(array) {
+    return array.join(" ");
 }
 
 function getRandomNumber(max) {
     //return random number between 0 and max (including 0 and excluding max)
+    return Math.floor(Math.random() * max);
 }
 
 function scrambleArray(oldArray) {
     //return scrambled array
+    let newArray = []
+    while(oldArray.length > 0){
+        let randomIndex = getRandomNumber(oldArray.length);
+        newArray.push(oldArray[randomIndex]);
+        oldArray.splice(randomIndex, 1);
+    }
+
+    return newArray;
 }
 
 function scrambleText(text) {
     // return scrambled text
 }
 
+function printScrambledText(text) {
+    resultContainer.textContent = text;
+}
+
 function onClickScramble() {
     // update textContent of resultContainer
+    let inputText =  getUserInput();
+    let inputTextArray = textToWordArray(inputText);
+    let scrambleInputTextArray = scrambleArray(inputTextArray);
+    let scrambledinputText = arrayToText(scrambleInputTextArray);
+    printScrambledText(scrambledinputText);
 }
 
 function realTimeScramble(event) {
@@ -43,7 +67,11 @@ function realTimeScramble(event) {
 
 function getWordCount(text) {
     //# return word count
+    let words = arrayToText();
+    return words.split(" ").length;
+
 }
+console.log(getWordCount());
 
 function getLetterCount(text) {
     //# return letter count
