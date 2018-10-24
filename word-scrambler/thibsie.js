@@ -1,4 +1,4 @@
-//select text area
+    //select text area
 let textarea = document.querySelector("textarea");
 //select btn
 let btn = document.querySelector("#submit");
