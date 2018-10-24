@@ -22,7 +22,7 @@ function textToWordArray(text) {
 }
 
 function arrayToText(array) {
-    return array.tostring();   
+    return array.join(" ");   
 }
 
 function getRandomNumber(max) {
