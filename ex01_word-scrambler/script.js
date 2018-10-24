@@ -10,7 +10,6 @@ let wordCountContainer = document.querySelector("#word-count");
 let letterCountContainer = document.querySelector("#letter-count");
 
 
-
 function getUserInput() {
     //return value of userInput
     return userInput.value;
@@ -67,8 +66,7 @@ function realTimeScramble(event) {
 
 function getWordCount(text) {
     //# return word count
-    let words = arrayToText();
-    return words.split(" ").length;
+    return test.length;
 
 }
 console.log(getWordCount());
