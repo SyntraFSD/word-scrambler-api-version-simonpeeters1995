@@ -44,7 +44,7 @@ function onClickScramble() {
 }
 
 function realTimeScramble(event) {
-    //## update textContent of resultContainer realtime
+    //## update textContent of resultContainer realtime9
 }
 
 function getWordCount(text) {
