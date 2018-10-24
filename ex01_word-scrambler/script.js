@@ -1,17 +1,18 @@
 //select textarea
-let userInput;
+let userInput = document.querySelector("textarea");
 //select btn
-let submitBtn;
+let submitBtn = document.querySelector("#submint-btn");
 //select result container
-let resultContainer;
+let resultContainer = document.querySelector("#result-container");
 //# select wordCount
-let wordCountContainer;
+let wordCountContainer = document.querySelector("#word-count");
 //# select letterCount
-let letterCountContainer;
+let letterCountContainer = document.querySelector("#letter-count");
 
 
 function getUserInput() {
     //return value of userInput
+    print userInput;
 }
 
 function textToWordArray(text) {
