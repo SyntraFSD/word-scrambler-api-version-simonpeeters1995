@@ -50,7 +50,7 @@ function printScrambledText(text){
     resultContainer.textContent = text;
 }
 
-function onClickScramble() {
+ {function onClickScramble()
     // update textContent of resultContainer
     let inputText = getUserInput();
     let inputTextArray = textToWordArray(inputText);
