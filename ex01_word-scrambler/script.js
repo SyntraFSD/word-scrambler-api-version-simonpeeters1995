@@ -76,7 +76,7 @@ function getWordCount(text) {
 
 function getLetterCount(text) {
     //# return letter count
-    return text.trim().length;
+    return text.length;
 }
 
 function updateWordCount(wordCount) {
@@ -108,3 +108,13 @@ submitBtn.addEventListener("click", onClickScramble);
 userInput.addEventListener("input", updateCounts);
 //## add input event listener to userinput for realTimeScramble
 userInput.addEventListener("input", realTimeScramble);
+
+document.addEventListener("DOMContentLoaded", function(event){
+    let currentText = document.querySelector(".textarea").value;
+
+    let letters = getLetterCount(currentText);
+    let woorden = getWordCount(currentText);
+
+    updateWordCount(letters);
+    updateLetterCount(woorden);
+}); 
