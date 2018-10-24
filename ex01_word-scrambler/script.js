@@ -1,21 +1,23 @@
 //select textarea
-let userInput;
+let userInput = document.querySelector(".textarea");
 //select btn
-let submitBtn;
+let submitBtn = document.querySelector("#submit-btn");
 //select result container
-let resultContainer;
+let resultContainer = document.querySelector(".card-content");
 //# select wordCount
-let wordCountContainer;
+let wordCountContainer = document.querySelector("#word-count");
 //# select letterCount
-let letterCountContainer;
+let letterCountContainer = document.querySelector("#letter-count");
 
 
 function getUserInput() {
     //return value of userInput
+    return userInput.textContent;
 }
 
 function textToWordArray(text) {
     //return array of words
+    return text.split(" ");
 }
 
 function arrayToText(array) {
@@ -23,10 +25,12 @@ function arrayToText(array) {
 
 function getRandomNumber(max) {
     //return random number between 0 and max (including 0 and excluding max)
-}
+    
+}       
 
 function scrambleArray(oldArray) {
     //return scrambled array
+
 }
 
 function scrambleText(text) {
