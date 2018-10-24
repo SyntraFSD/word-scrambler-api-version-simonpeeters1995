@@ -1,9 +1,9 @@
 //select textarea
-let userInput;
+let userInput = document.querySelector('#user-input');
 //select btn
-let submitBtn;
+let submitBtn = document.querySelector('#submit-btn');
 //select result container
-let resultContainer;
+let resultContainer = document.querySelector('#result-container');
 //# select wordCount
 let wordCountContainer;
 //# select letterCount
@@ -12,10 +12,12 @@ let letterCountContainer;
 
 function getUserInput() {
     //return value of userInput
+    return userInput.value;
 }
 
 function textToWordArray(text) {
     //return array of words
+    return text.trim().split(" ");
 }
 
 function arrayToText(array) {
@@ -35,6 +37,10 @@ function scrambleText(text) {
 
 function onClickScramble() {
     // update textContent of resultContainer
+    let inputText = getUserInput();
+    let inputTextArray = textToWordArray(inputText);
+    console.log(inputTextArray);
+    let scrambledInputTextArray = scrambleArray(inputTextArray);
 }
 
 function realTimeScramble(event) {
