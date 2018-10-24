@@ -1,7 +1,7 @@
 //select textarea
 let userInput = document.querySelector(".textarea");
 //select btn
-let submitBtn = document.querySelector("#submint-btn");
+let submitBtn = document.querySelector("#submit-btn");
 //select result container
 let resultContainer = document.querySelector("#result-container");
 //# select wordCount
@@ -21,6 +21,7 @@ function textToWordArray(text) {
 }
 
 function arrayToText(array) {
+    return array.join(" ");
 }
 
 function getRandomNumber(max) {
@@ -34,19 +35,27 @@ function scrambleArray(oldArray) {
 
     while(oldArray.length > 0){
         let randomIndex = getRandomNumber(oldArray.length);
-        newArray.push(oldArray[randomIndex])
+        newArray.push(oldArray[randomIndex]);
+        oldArray.splice(randomIndex, 1);
     }
+    return newArray;
 }
 
 function scrambleText(text) {
     // return scrambled text
 }
 
+function printScrambledText(text) {
+    resultContainer.textContent = text;
+}
+
 function onClickScramble() {
     // update textContent of 
     let inputText = getUserInput();
     let inputTextArray = textToWordArray (inputText);
-    let scrambledInputTextArray = scrambleArray("inputTextArray");
+    let scrambledInputTextArray = scrambleArray (inputTextArray);
+    let scrambledInputText = arrayToText(scrambledInputTextArray);
+    printScrambledText(scrambledInputText);
 
 }
 
