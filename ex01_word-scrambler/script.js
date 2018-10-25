@@ -31,15 +31,12 @@ function getRandomNumber(max) {
 function scrambleArray(oldArray) {
   // return scrambled array
   const newArray = [];
-  decodeKey = [];
 
   while (oldArray.length > 0) {
     const randomIndex = getRandomNumber(oldArray.length);
-    decodeKey.push(randomIndex);
     newArray.push(oldArray[randomIndex]);
     oldArray.splice(randomIndex, 1);
   }
-  console.log(decodeKey);
   return newArray;
 }
 
