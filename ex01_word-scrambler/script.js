@@ -24,9 +24,11 @@ function arrayToText(array) {
     return array.join(" ");
 }
 
+console.log(arrayToText);
+
 function getRandomNumber(max) {
     //return random number between 0 and max (including 0 and excluding max)
-    Math floor(Math.random() * max);
+    return Math.floor(Math.random() * max);
     
 }       
 
@@ -47,6 +49,7 @@ function scrambleText(text) {
     return text.arrayToText(" ");
 }
 
+
 function printScrambledText(text){
     resultContainer.textContent = text;
 }
@@ -57,35 +60,41 @@ function onClickScramble() {
     let inputText = getUserInput();
     let inputTextArray = textToWordArray(inputText);
     let scrambleInputTextArray = scrambleArray(inputTextArray);
-    let scrambledInputText = arrayToText(scrambledInputText);
+    let scrambledInputText = arrayToText(scrambleInputTextArray);
     printScrambledText(scrambledInputText);
 }
 
-function realTimeScramble(event) {
+/* function realTimeScramble(event) {
     //## update textContent of resultContainer realtime
     let inputText = getUserInput();
     let inputTextArray = textToWordArray(inputText);
     let scrambleInputTextArray = scrambleArray(inputTextArray);
-    let scrambledInputText = arrayToText(scrambledInputText);
+    let scrambledInputText = arrayToText(scramblInputTextArray);
     printScrambledText(scrambledInputText);
-}
+} */
 
 function getWordCount(text) {
     //# return word count
-    
+    return text.split(" ").length;
 }
 
 function getLetterCount(text) {
     //# return letter count
+    return text.length;
     
 }
 
 function updateWordCount(wordCount) {
     //# update the Word Count
+    let wordCount = getWordCount();
+    wordCountContainer.textContent = text;
+
 }
 
 function updateLetterCount(letterCount){
     //# update the Letter Count
+    let letterCount = getLetterCount();
+    letterCountContainer.textContent = text;
 }
 
 function updateCounts(event) {
