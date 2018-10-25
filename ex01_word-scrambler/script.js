@@ -69,7 +69,7 @@ function realTimeScramble(event) {
     //## update textContent of resultContainer realtime
     let nieuweTekst = getUserInput();
     let gehaspeldeTekst = scrambleText(nieuweTekst);
-    resultContainer.textContent=gehaspeldeTekst;
+    resultContainer.textContent = gehaspeldeTekst;
 }
 
 function getWordCount(text) {
@@ -97,7 +97,7 @@ function updateCounts(event) {
     let currentText = this.value;
     // this when function is executed by event => event.target
     // this.value == event.target.value
-    let letterTeller = getletterCount(currentText);
+    let letterTeller = getLetterCount(currentText);
     let woordTeller = getWordCount(currentText);
     updateWordCount(woordTeller);
     updateLetterCount(letterTeller);
