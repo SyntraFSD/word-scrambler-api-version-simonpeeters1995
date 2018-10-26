@@ -1,60 +1,88 @@
 //select textarea
-let userInput;
+let userInput = document.querySelector('#user-input');
 //select btn
-let submitBtn;
+let submitBtn = document.querySelector('#submit-btn');
 //select result container
-let resultContainer;
+let resultContainer = document.querySelector('#result-container');
 //# select wordCount
-let wordCountContainer;
+let wordCountContainer = document.querySelector('#word-count'); ;
 //# select letterCount
-let letterCountContainer;
+let letterCountContainer = document.querySelector('#letter-count');
 
 
 function getUserInput() {
     //return value of userInput
+    return userInput.value;    
 }
-
 function textToWordArray(text) {
     //return array of words
+    return text.trim().split(' ');
 }
-
 function arrayToText(array) {
+    return array.join(' ');
 }
 
 function getRandomNumber(max) {
     //return random number between 0 and max (including 0 and excluding max)
+    return Math.floor(Math.random() * max);
 }
 
 function scrambleArray(oldArray) {
     //return scrambled array
-}
+    //return oldArray.sort(function(a, b){return 0.5 - Math.random()});
+    let newArray  = [];
+
+    while(oldArray.length > 0){
+        let randomIndex = getRandomNumber(oldArray.length);
+        newArray.push(oldArray[randomIndex]);
+        oldArray.splice(randomIndex, 1);
+    } 
+    return newArray;
+} 
 
 function scrambleText(text) {
     // return scrambled text
 }
+function printScrambledText(text){
+    resultContainer.textContent = text;
+}
 
 function onClickScramble() {
     // update textContent of resultContainer
+    let inputText = getUserInput();
+    let inputTextArray = textToWordArray(inputText);
+    let scrambledInputTextArray = scrambleArray(inputTextArray);
+    let scrambledInputText = arrayToText(scrambledInputTextArray);
+    printScrambledText(scrambledInputText);
 }
 
 function realTimeScramble(event) {
     //## update textContent of resultContainer realtime
+    let inputText = getUserInput();
+    let inputTextArray = textToWordArray(inputText);
+    let scrambledInputTextArray = scrambleArray(inputTextArray);
+    let scrambledInputText = arrayToText(scrambledInputTextArray);
+    printScrambledText(scrambledInputText);
 }
 
 function getWordCount(text) {
     //# return word count
+    return text.split(' ').length;
 }
 
 function getLetterCount(text) {
     //# return letter count
+    return text.length;
 }
 
 function updateWordCount(wordCount) {
     //# update the Word Count
+    wordCountContainer.textContent = wordCount;
 }
 
 function updateLetterCount(letterCount){
     //# update the Letter Count
+    letterCountContainer.textContent = letterCount;
 }
 
 function updateCounts(event) {
@@ -62,6 +90,11 @@ function updateCounts(event) {
     let currentText = this.value;
     // this when function is executed by event => event.target
     // this.value == event.target.value
+    let letterTeller = getLetterCount(currentText);
+    let woordTeller = getWordCount(currentText);
+    updateLetterCount(letterTeller);
+    updateWordCount(woordTeller);
+
 }
 
 //add click event listener to submitBtn
