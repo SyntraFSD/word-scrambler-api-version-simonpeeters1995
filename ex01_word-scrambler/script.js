@@ -65,6 +65,7 @@ function realTimeScramble(event) {
 
 function getWordCount(text) {
     //# return word count
+    
 }
 
 function getLetterCount(text) {
