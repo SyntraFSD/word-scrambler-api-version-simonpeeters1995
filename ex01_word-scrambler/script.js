@@ -5,9 +5,11 @@ let submitBtn= document.querySelector("#submit-btn");
 //select result container
 let resultContainer= document.querySelector(".card-content");
 //# select wordCount
-let wordCountContainer= document.querySelector("#word-count");
+let wordCountContainer= document.querySelector("#letter-count");
 //# select letterCount
-let letterCountContainer= document.querySelector("#letter-count");
+let letterCountContainer= document.querySelector("#word-count");
+//
+let positions=[];
 
 
 function getUserInput() {
@@ -17,7 +19,7 @@ function getUserInput() {
 
 function textToWordArray(text) {
     //return array of words
-    return text.trim().split(" ");
+    return text.split(" ");
 
 }
 
@@ -35,11 +37,28 @@ function scrambleArray(oldArray) {
     //alternative oplossing --->                    
     //return oldArray.sort(function(a,b) {return 0.5-Math.random()});
     let newAray=[];
+    let usedPos=[];
+    positions=[];
     
     while(oldArray.length > 0){
-        let randomIndex = getRandomNumber(oldArray.length);
+
+        let randomIndex = getRandomNumber(oldArray.length)
         newAray.push(oldArray[randomIndex]);
-        oldArray.splice(randomIndex,1);
+        positions.push(randomIndex);
+        newAray.slice(oldArray[randomIndex],1);
+       
+    }
+
+    console.log(positions);
+    return newAray;
+}
+
+function deScrambleArray(array){
+    let newAray=[array.length];
+    
+    for(let i =0 ; i < positions.length;i++){
+        newAray.push(array[positions[i]]);
+        array.splice(positions[i],1);
     }
 
     return newAray;
@@ -55,11 +74,22 @@ function scrambleText(text) {
     return textChanged;
 }
 
+function reverseScramble(text) {
+    //
+    let wordArray = textToWordArray(text);
+    wordArray = deScrambleArray(wordArray);
+    let textreChanged = arrayToText(wordArray);
+
+    return textreChanged
+}
+
 function onClickScramble() {
     // update textContent of resultContainer
+
     let text= getUserInput();
     let nieuweText = scrambleText(text);
     resultContainer.textContent = nieuweText; 
+
 }
 
 function realTimeScramble(event) {
