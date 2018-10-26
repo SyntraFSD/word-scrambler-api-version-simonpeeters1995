@@ -5,7 +5,7 @@ let submitBtn = document.querySelector('#submit-btn');
 //select result container
 let resultContainer = document.querySelector('#result-container');
 //# select wordCount
-let wordCountContainer = document.querySelector('#word-Count');
+let wordCountContainer = document.querySelector('#word-count');
 //# select letterCount
 let letterCountContainer =document.querySelector('#letter-count');
 
@@ -99,8 +99,8 @@ function updateCounts(event) {
     // this.value == event.target.value
     let letterTeller = getLetterCount(currentText);
     let woordTeller = getWordCount(currentText);
-    updateWordCount(woordTeller);
     updateLetterCount(letterTeller);
+    updateWordCount(woordTeller);
 }
 
 //add click event listener to submitBtn
