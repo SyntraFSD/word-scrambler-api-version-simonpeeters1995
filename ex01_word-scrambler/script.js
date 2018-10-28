@@ -18,9 +18,11 @@ function getUserInput() {
 
 function textToWordArray(text) {
     //return array of words
-    return text.trim().split(" ");
+    return text.trim().split(" ").length;
+    console.log(textToWordArray());
+
 }
-//console.log(textToWordArray());
+//let word = textToWordArray();
 
 function arrayToText(array) {
     return array.join(" ");
@@ -66,8 +68,7 @@ function realTimeScramble(event) {
 
 function getWordCount(text) {
     //# return word count
-    return test.length;
-
+    return text.trim().split(" ")
 }
 console.log(getWordCount());
 
