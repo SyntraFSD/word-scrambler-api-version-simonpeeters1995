@@ -20,12 +20,12 @@ function textToWordArray(text) {
 }
 
 function arrayToText(array) {
-
+  return array.join('');
 }
 
 function getRandomNumber(max) {
   // return random number between 0 and max (including 0 and excluding max)
-
+  return Math.floor(Math.random() * Math.floor(max));
 }
 
 function scrambleArray(oldArray) {
