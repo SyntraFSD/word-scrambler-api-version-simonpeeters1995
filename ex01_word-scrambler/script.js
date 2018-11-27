@@ -29,14 +29,23 @@ function getRandomNumber(max) {
 }
 
 function scrambleArray(oldArray) {
-  // return scrambled array
-
-
-
+  // return scrambled array 
+  const newArray = [];
+  while (oldArray.length > 0){ //eerst verzekeren we dat de loop stopt als de oldArray leeg is, als length=0)
+    const randomIndex = getRandomNumber(oldArray.length); // en dan vervangen we woorden door indexnr en pikken we een willekeurig nr uit oldArray
+    newArray.push(oldArray[randomIndex]); // en voegen het random indexnummer toe aan newArray
+    oldArray.splice(randomIndex, 1); // verwijdert random indexnr uit oldArray om te voorkomen dat bepaalde indexnrs 2x zouden in newArray zitten//
+  }
+  return newArray;
 }
 
+
 function scrambleText(oldText) {
-  //  return scrambled text
+  // pikt er scrambelt de indexnrs en vervangt de indexnrs door woorden
+  const textArray = textToWordArray(oldText); 
+  const scrambledArray = scrambleArray(textArray);
+  return arrayToText(scrambledArray);
+}
 
 }
 
