@@ -14,12 +14,11 @@ function getUserInput() {
   return userInput.value;
 }
 
-function textToWordArray(text) {
-  // return array of words
-  return text.trim().split(' ');
+function textToWordArray(text) { 
+    return text.trim().split(' ');
 }
 
-function arrayToText(array) {
+function arrayToText(array) { 
   return array.join(' ');
 }
 
@@ -27,6 +26,7 @@ function getRandomNumber(max) {
   // return random number between 0 and max (including 0 and excluding max)
   return Math.floor(Math.random() * max);
 }
+
 
 function scrambleArray(oldArray) {
   // return scrambled array
