@@ -40,7 +40,7 @@ function scrambleArray(oldArray) {
     let usedPos=[];
     positions=[];
     
-    while(oldArray.length > 0){
+    for(let i =0;i < oldArray.length;i++){
 
         let randomIndex = getRandomNumber(oldArray.length)
         newAray.push(oldArray[randomIndex]);
@@ -50,17 +50,6 @@ function scrambleArray(oldArray) {
     }
 
     console.log(positions);
-    return newAray;
-}
-
-function deScrambleArray(array){
-    let newAray=[array.length];
-    
-    for(let i =0 ; i < positions.length;i++){
-        newAray.push(array[positions[i]]);
-        array.splice(positions[i],1);
-    }
-
     return newAray;
 }
 
