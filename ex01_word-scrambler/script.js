@@ -34,18 +34,17 @@ function getRandomNumber(max) {
 
 function scrambleArray(oldArray) {
     //return scrambled array
-    //alternative oplossing --->                    
+    //alternative oplossing --->               
     //return oldArray.sort(function(a,b) {return 0.5-Math.random()});
     let newAray=[];
-    let usedPos=[];
     positions=[];
     
-    for(let i =0;i < oldArray.length;i++){
+    while(oldArray.length > 0){
 
         let randomIndex = getRandomNumber(oldArray.length)
         newAray.push(oldArray[randomIndex]);
         positions.push(randomIndex);
-        newAray.slice(oldArray[randomIndex],1);
+        oldArray.splice(randomIndex,1);
        
     }
 
